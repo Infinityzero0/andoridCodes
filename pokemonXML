@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".LogIn_Activity"
+    >
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:src="@drawable/pokemonlogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        />
+
+    <EditText
+        android:id="@+id/etMobileNum"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="#A8A3A6"
+        android:textColorHint="#7A7777"
+        android:hint="@string/enter_your_mobile_number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:padding="6dp"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etMobileNum"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:padding="6dp"
+        android:backgroundTint="#BCBABA"
+        android:hint="@string/password_new"
+        android:textColorHint="#7A7777"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:textSize="20sp"
+         />
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="6dp"
+            android:text="Log In"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+
+    <TextView
+        android:id="@+id/txtforgotP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+
+        android:padding="10dp"
+        android:text="@string/forgot_password"
+        android:textSize="15sp"
+
+        />
+          <TextView
+               android:id="@+id/Register"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_centerHorizontal="true"
+               android:layout_marginBottom="20dp"
+              android:padding="10dp"
+              android:text="Register Now"
+              android:textSize="15sp"
+              />
+</RelativeLayout>
+-------------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtHeadder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intent Value"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:background="#B31C66"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_margin="10dp"
+            android:background="#FFEB3B">
+
+            <ImageView
+                android:id="@+id/imgHeaderImage"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/pikachu" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/imgHeaderImage"
+                android:text="Pikachu"
+                android:textColor="#810541"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imgHeaderImage"
+                android:text="Type : Electric"
+                android:textColor="#810541"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#ED5E25">
+
+            <ImageView
+                android:id="@+id/imgCharizard"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/charizard" />
+
+            <TextView
+                android:id="@+id/txtName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/imgCharizard"
+                android:text="Charizard"
+                android:textColor="#F80303"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtType1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName1"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCharizard"
+                android:text="Type : Fire"
+                android:textColor="#F80303"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#499116">
+
+            <ImageView
+                android:id="@+id/imgbalbasur"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/balbasur" />
+
+            <TextView
+                android:id="@+id/txtName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/imgbalbasur"
+                android:text="Balbasur"
+                android:textColor="#35F121"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtType2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName2"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgbalbasur"
+                android:text="Type :  Grass"
+                android:textColor="#35F121"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#E4E4E0">
+
+            <ImageView
+                android:id="@+id/imgpigeotto"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/pigeotto" />
+
+            <TextView
+                android:id="@+id/txtName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/imgpigeotto"
+                android:text="Pigeotto"
+                android:textColor="#60575B"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtType3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName3"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgpigeotto"
+                android:text="Type : Flying"
+                android:textColor="#60575B"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#18C5A2">
+
+            <ImageView
+                android:id="@+id/imgLapras"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/lapras" />
+
+            <TextView
+                android:id="@+id/txtName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/imgLapras"
+                android:text="Lapras"
+                android:textColor="#054487"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtType4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtName4"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgLapras"
+                android:text="Type : Water"
+                android:textColor="#054487"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#18C5A2">
+
+            <ImageView
+                android:id="@+id/imgsqurtile"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/squrtitle" />
+
+            <TextView
+                android:id="@+id/txtName5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/imgsqurtile"
+                android:text="Squirtle"
+                android:textColor="#054487"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtType5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName5"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgsqurtile"
+                android:text="Type : Water"
+                android:textColor="#054487"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_message"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+
+            />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/send"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+
+            />
+    </LinearLayout>
+
+</ScrollView>
+---------------------------------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recived_Message">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Message"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+
+            />
+         <TextView
+             android:id="@+id/txtMessage"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:textSize="15dp"
+
+             />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
