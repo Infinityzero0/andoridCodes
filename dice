@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="75dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/diceImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/one"
+        android:layout_centerHorizontal="true"
+        />
+        <Button
+            android:id="@+id/rollButton"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/diceImage"
+            android:text="@string/roll"
+           android:layout_centerHorizontal="true"
+            />
+</RelativeLayout>
+
+
+-------------------------------
+package com.suraj.diceroll
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.LinearLayout
+import kotlin.random.Random as Random
+
+class MainActivity : AppCompatActivity() {
+
+    lateinit var diceImage:ImageView
+    lateinit var button: Button
+     lateinit var layout:LinearLayout
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.background)
+        button = findViewById(R.id.button)
+
+        button.setOnClickListener {
+             changeBackground()
+
+        }
+        layout=findViewById(R.id.changBackground)
+
+//
+//        val roll: Button = findViewById(R.id.rollButton)
+//        roll.text = getString(R.string.lets_roll)
+//        roll.setOnClickListener {
+//            rollDice()
+//        }
+//        diceImage=findViewById(R.id.diceImage)
+    }
+
+    private fun changeBackground() {
+        var randomNum = Random.nextInt(1,6)
+        var draewableResource=when(randomNum){
+            1->R.color.green
+            2->R.color.purple_200
+
+            3->R.color.teal_200
+//            4->R.drawable.four
+//            5->R.drawable.five
+//            else->R.drawable.six
+            else->R.color.colorPrimary
+
+        }
+        layout.setBackgroundResource(draewableResource)
+       // diceImage.setImageResource(draewableResource)
+    }
+    }
+
+//    private fun backGround() {
+//        var colorNum = Random.nextInt(1,4)
+//        var colorResourc=when(colorNum){
+//            1->R.drawable.
+//       }
+
+
+
+//    private fun rollDice(){
+//        var randomNum = Random.nextInt(1,6)
+//        var draewableResource=when(randomNum){
+//            1->R.drawable.one
+//            2->R.drawable.two
+//            3->R.drawable.three
+//            4->R.drawable.four
+//            5->R.drawable.five
+//            else->R.drawable.six
+//
+//        }
+//        diceImage.setImageResource(draewableResource)
+//    }
